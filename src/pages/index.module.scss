@@ -1,0 +1,55 @@
+body {
+  border: 0;
+
+  .navContainer {
+    background-image: linear-gradient(135deg, #ec9f05 10%, #ff4e00 100%);
+  }
+
+  .bioBlurb {
+    font-size: 15px;
+  }
+
+  .storyBlurb {
+    font-size: 15px;
+  }
+
+  small {
+    background-color: #dde;
+    padding: 1px 3px;
+  }
+
+  .headertitleheavy {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+  }
+  .headertitlelight {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 32px;
+  }
+  #test {
+    border: 3px solid green;
+  }
+
+  .categories {
+    color: #ffe;
+    font-size: 14px;
+    padding: 0 5px;
+    text-decoration: none;
+    box-shadow: 0;
+    letter-spacing: 0.07em;
+  }
+
+  footer {
+    margin-top: 20px;
+    color: #333;
+    font-size: 12px;
+
+    a {
+      font-size: 12px;
+      color: #222;
+      font-weight: bold;
+    }
+  }
+}

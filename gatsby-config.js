@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Inflammatory Dev`,
+    title: `Annoyer of partners in Consultancies ... `,
     author: `David Falconer`,
     description: `Random Dev Thoughts.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
@@ -9,6 +9,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

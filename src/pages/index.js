@@ -5,6 +5,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm } from '../utils/typography'
+import blah from '../pages/index.module.scss'
 
 class BlogIndex extends React.Component {
   render() {
@@ -19,23 +20,58 @@ class BlogIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
-        {posts.map(({ node }) => {
+
+
+
+        <h2>Latest</h2>
+        {posts.filter((item) => ((item.node.frontmatter.category === 'javascript') && (item.node.frontmatter.status !== 'private'))).map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
+          console.log('title is ', node.frontmatter.category);
+            return (
+              <div key={node.fields.slug}>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <small>{node.frontmatter.date}</small>
+                <p className={blah.storyBlurb} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              </div>
+            )
+
+        })}
+
+
+
+
+
+
+
+
+        <h2>Javascript</h2>
+        {posts.filter((item) => ((item.node.frontmatter.category === 'javascript') && (item.node.frontmatter.status !== 'private'))).map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          console.log('title is ', node.frontmatter.category);
+            return (
+              <div key={node.fields.slug}>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <small>{node.frontmatter.date}</small>
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              </div>
+            )
+
         })}
       </Layout>
     )
@@ -61,6 +97,8 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            category
+            status
           }
         }
       }

@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
+import blah from '../pages/index.module.scss'
 
 function Bio() {
   return (
@@ -30,12 +31,11 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
+            <p className={blah.bioBlurb}>
+              Written by <strong>{author}</strong> who loves his Javascript, thinks Functional Programming is the way of the future. Finds a11y boring. Does more to push Iggy Pop's career than his current employer.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+                I say stuff on Twitter that can offend people
               </a>
             </p>
           </div>
