@@ -1,6 +1,11 @@
 body {
   border: 0;
 
+  pre {
+    background-color: #eee;
+    padding: 20px;
+  }
+
   .navContainer {
     background-image: linear-gradient(135deg, #ec9f05 10%, #ff4e00 100%);
   }
