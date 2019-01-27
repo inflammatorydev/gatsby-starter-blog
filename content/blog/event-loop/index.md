@@ -1,5 +1,5 @@
 ---
-title: When is my function actually going to fire? The Event Loop timeline.
+title: The Javascript event loop ... when does your function actually get called?
 category: javascript
 status: public
 date: '2019-01-01T22:12:03.284Z'
@@ -44,6 +44,8 @@ Well lets be honest, it would be a pretty straightforward article if that was th
 So what is it then?
 
 **Its actually 'a', 'd', 'b', 'c'**
+
+![](https://i.imgflip.com/2s4rmf.jpg)
 
 To understand why this is, we need to know 4 key things.
 
