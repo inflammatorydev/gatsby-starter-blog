@@ -45,7 +45,7 @@ So what is it then?
 
 **Its actually 'a', 'd', 'b', 'c'**
 
-![](https://i.imgflip.com/2s4rmf.jpg)
+![](https://i.imgflip.com/2s4s48.jpg)
 
 To understand why this is, we need to know 4 key things.
 
