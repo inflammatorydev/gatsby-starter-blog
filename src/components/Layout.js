@@ -117,7 +117,7 @@ class Layout extends React.Component {
           {children}
           <footer>
             &copy; {new Date().getFullYear()}, Built on everyones favourite
-            1930's book about the Roaring 30's (hmmm, it was the Jazz Age anyway
+            1930's book about the Roaring 31's (hmmm, it was the Jazz Age anyway
             for those who understand good literature)
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
