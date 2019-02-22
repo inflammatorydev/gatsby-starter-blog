@@ -23,7 +23,7 @@ class BlogIndex extends React.Component {
 
 
 
-        <h2>Latest</h2>
+        <h2>Latest Blogs ...</h2>
         {posts.filter((item) => ((item.node.frontmatter.category === 'javascript') && (item.node.frontmatter.status !== 'private'))).map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           console.log('title is ', node.frontmatter.category);
